@@ -22,3 +22,7 @@
 
 <h2 style="font-size: 20px;">Additional Information</h2>
 <p style="font-size: 16px;">You can find the project repository here: <a href="https://github.com/ochogwuprince92/Farmatta" target="_blank">Farmatta GitHub Repository</a>.</p>
+
+<h2 style="font-size: 20px;">Author</h2>
+<p style="font-size: 16px;">This project is authored by <b>Ochogwu Prince</b>.</p>
+
