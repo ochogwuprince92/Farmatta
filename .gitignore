@@ -1,0 +1,17 @@
+
+# Byte-compiled files
+*.pyc
+__pycache__/
+
+# Virtual environment
+Farmatta
+
+# Django-specific
+db.sqlite3
+
+# IDE files
+*.vscode/
+*.idea/
+
+# Logs
+*.log
