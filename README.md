@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farmatta API - Project Documentation</title>
-</head>
+
 <h1 style="font-family: Arial, sans-serif; text-align: center; background-color: #00796b; color: white; padding: 10px 0;">Farmatta API - Project Documentation</h1>
 
 <h2 style="font-family: Arial, sans-serif; color: #00796b;">Project Description</h2>
@@ -111,6 +105,4 @@
     <li>Provide farm equipment listing and rental functionalities.</li>
 </ul>
 
-<h1 style="font-family: Arial, sans-serif; text-align: center; background-color: #00796b; color: white; padding: 10px 0;">End of Documentation</h1>
-
-<p style="font-family: Arial, sans-serif; text-align: center; font-size: 12px; color: #00796b; margin: 20px 0;">Author: Prince<br>&copy; 2024 Farmatta - All Rights Reserved</p>
+<p style="font-family: Arial, sans-serif; text-align: center; font-size: 12px; color: #00796b; margin: 20px 0;">Authored by Ochogwu Prince<br>&copy; 2024 Farmatta - All Rights Reserved</p>
