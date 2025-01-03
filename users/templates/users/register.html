@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        /* Lush green gradient background */
+        body {
+            background: linear-gradient(135deg, #85C850, #3B6F3A); /* Lush green color blend */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 110vh; /* Full viewport height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: #333; /* Dark text for better readability */
+        }
+
+        /* Form container to take full page with white background */
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.9); /* Slight opacity to blend with background */
+            padding: 30px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: dark-green; /* Darker green for header */
+            font-size: 24px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Style form fields */
+        form input, form button {
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        /* Green Registration Button */
+        form button[type="submit"] {
+            background-color: #6c9e2e; /* Lush green for button */
+            color: white;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s ease;
+            padding: 12px;
+            font-size: 16px;
+        }
+
+        /* Hover effect for the button */
+        form button[type="submit"]:hover {
+            background-color: #5a8624; /* Slightly darker green */
+        }
+
+        .error-message {
+            color: #d9534f; /* Red for error messages */
+            margin-bottom: 15px;
+        }
+
+        /* Style error messages */
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>User Registration</h1>
+
+    <div class="form-container">
+        <form method="POST" action="{% url 'register' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Register</button>
+        </form>
+
+        {% if form.errors %}
+            <div class="error-message">
+                <ul>
+                    {% for field in form %}
+                        {% for error in field.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
