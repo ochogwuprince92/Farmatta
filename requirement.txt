@@ -1,7 +1,8 @@
 Django
 Djangorestframework
 Djangorestframework-simplejwt
-pillows
+extensions
+pillow
 SQlite
 Postgresql
 gunicorn
