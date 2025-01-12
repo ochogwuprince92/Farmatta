@@ -1,8 +1,0 @@
-Django
-Djangorestframework
-Djangorestframework-simplejwt
-extensions
-pillow
-SQlite
-Postgresql
-gunicorn

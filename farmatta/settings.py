@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-phdh6enpe+#5ec!^a=^4m$_p1(i-_k(^ach(sy7vo#y11dw@*i'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['khaneworld.pythonanywhere.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -80,6 +80,12 @@ WSGI_APPLICATION = 'farmatta.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 import os
+from pathlib import Path
+
+# Define BASE_DIR for SQLite
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Check the environment and configure databases accordingly
 
 if os.environ.get('DJANGO_ENV') == 'production': 
     DATABASES = {
