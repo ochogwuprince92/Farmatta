@@ -19,7 +19,8 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('users/', include('users.urls')),
+    path('users/', include('users.urls', namespace='users')),
     path('api/farm_management/', include('farm_management.urls')),
     path('api/marketplace/', include('marketplace.urls')),
+
 ]
