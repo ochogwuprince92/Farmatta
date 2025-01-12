@@ -23,10 +23,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-phdh6enpe+#5ec!^a=^4m$_p1(i-_k(^ach(sy7vo#y11dw@*i'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['farmatta-6c6n.onrender.com']
 
+# Use environment variables for sensitive data
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 
 # Application definition
 
