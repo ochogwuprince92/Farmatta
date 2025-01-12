@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-phdh6enpe+#5ec!^a=^4m$_p1(i-_k(^ach(sy7vo#y11dw@*i'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['khaneworld.pythonanywhere.com']
 
 
 # Application definition
@@ -168,3 +168,9 @@ SIMPLE_JWT = {
 }
 
 LOGIN_URL = 'users:login'
+
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'mediafiles'

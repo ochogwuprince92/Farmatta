@@ -4,3 +4,4 @@ Djangorestframework-simplejwt
 pillows
 SQlite
 Postgresql
+gunicorn
