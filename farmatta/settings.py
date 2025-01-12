@@ -19,6 +19,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
+import os
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-phdh6enpe+#5ec!^a=^4m$_p1(i-_k(^ach(sy7vo#y11dw@*i'
 
@@ -28,7 +29,7 @@ DEBUG = False
 ALLOWED_HOSTS = ['farmatta-6c6n.onrender.com']
 
 # Use environment variables for sensitive data
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'a*oo9ywlj7h%(&8v$)c@v%a4+t=+(vaq7vt6=v&^z8p22fit4e')
 
 # Application definition
 
@@ -51,7 +52,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    # 'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
