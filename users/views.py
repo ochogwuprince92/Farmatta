@@ -84,7 +84,7 @@ def login_user(request):
                         'access_token': access_token,
                         'refresh_token': refresh_token,
                     }, status=status.HTTP_200_OK)
-                else:
+                    
                     # Handle the non-API (form-based) response, e.g., redirect to homepage
                     login(request, user)
                     return redirect('users:home')
