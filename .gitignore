@@ -15,4 +15,5 @@ db.sqlite3
 
 # Logs
 *.log
-SECRET_KEY
+
+.env
