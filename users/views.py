@@ -117,13 +117,3 @@ class ProtectedView(APIView):
     def get(self, request):
         return Response({'message': 'This is a protected endpoint' })
 
-import logging
-logger = logging.getLogger(__name__)
-
-def login_user(request):
-    try:
-        # Login logic here
-        ...
-    except Exception as e:
-        logger.error(f"Login failed: {e}")
-        raise
