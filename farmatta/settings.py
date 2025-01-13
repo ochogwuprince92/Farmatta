@@ -8,7 +8,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'fallback-default-key-for-local-use')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['farmatta.onrender.com', '127.0.0.1', 'localhost']
 
@@ -59,18 +59,16 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'farmatta.wsgi.application'
 
-from decouple import config
-
 # Database Configuration
-if config('DJANGO_ENV', default='development') == 'production':
+if os.environ.get('DJANGO_ENV') == 'production':
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
-            'NAME': config('DB_NAME', default='farmatta'),
-            'USER': config('DB_USER', default='farmatta'),
-            'PASSWORD': config('DB_PASSWORD', default='Ogwaa123#'),
-            'HOST': config('DB_HOST', default='localhost'),
-            'PORT': config('DB_PORT', default='5432'),
+            'NAME': os.environ.get('DB_NAME', 'farmatta'),
+            'USER': os.environ.get('DB_USER', 'farmatta'),
+            'PASSWORD': os.environ.get('DB_PASSWORD', 'Ogwaa123#'),
+            'HOST': os.environ.get('DB_HOST', 'localhost'),
+            'PORT': os.environ.get('DB_PORT', '5432'),
         }
     }
 else:
