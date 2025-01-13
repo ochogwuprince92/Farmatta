@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from users import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -23,4 +24,6 @@ urlpatterns = [
     path('api/farm_management/', include('farm_management.urls')),
     path('api/marketplace/', include('marketplace.urls')),
 
+    # Route to the home view
+    path('', views.home, name='home'),
 ]
